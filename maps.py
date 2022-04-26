@@ -41,7 +41,7 @@ def world():
     data_load_state = st.text('Loading data...')
     data = load_data()
     data_load_state.text("Done! (using st.cache)")
-    st.subheader('Choose day')
+    st.subheader('Select day')
     date_to_filter = st.slider('date', 12, 31, 12)
     filtered_data = data[data[DATE_COLUMN].dt.day == date_to_filter]
     st.subheader('The World map on 03-%s-22' % date_to_filter)
@@ -63,7 +63,7 @@ def ukraine():
     data_load_state = st.text('Loading data...')
     data = load_data()
     data_load_state.text("Done! (using st.cache)")
-    st.subheader('Choose day')
+    st.subheader('Select day')
     date_to_filter = st.slider('date', 12, 31, 12)
     filtered_data = data[data[DATE_COLUMN].dt.day == date_to_filter]
 
