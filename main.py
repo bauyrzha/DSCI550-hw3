@@ -227,25 +227,6 @@ def fox_news():
     if sd == "Top 20 mentioned LOC":
         plot(fox_loc,sd)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def world():
     DATE_COLUMN = 'date'
     DATA_URL = ('world_map.csv')
