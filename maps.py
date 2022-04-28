@@ -42,7 +42,7 @@ def world():
     data = load_data()
     data_load_state.text("Done! (using st.cache)")
     st.subheader('Select day')
-    date_to_filter = st.slider('date', 12, 31, 12)
+    date_to_filter = st.slider('date', 1, 31, 12)
     filtered_data = data[data[DATE_COLUMN].dt.day == date_to_filter]
     st.subheader('The World map on 03-%s-22' % date_to_filter)
     st.map(filtered_data)
@@ -64,7 +64,7 @@ def ukraine():
     data = load_data()
     data_load_state.text("Done! (using st.cache)")
     st.subheader('Select day')
-    date_to_filter = st.slider('date', 12, 31, 12)
+    date_to_filter = st.slider('date', 1, 31, 12)
     filtered_data = data[data[DATE_COLUMN].dt.day == date_to_filter]
 
     st.pydeck_chart(pdk.Deck(
