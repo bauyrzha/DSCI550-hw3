@@ -229,7 +229,7 @@ def fox_news():
 
 def world():
     DATE_COLUMN = 'date'
-    DATA_URL = ('world_map.csv')
+    DATA_URL = ('ukraine_map.csv')
     @st.cache
     def load_data():
         data = pd.read_csv(DATA_URL)
@@ -240,7 +240,7 @@ def world():
     data_load_state = st.text('Loading data...')
     data = load_data()
     data_load_state.text("Done! (using st.cache)")
-    st.subheader('Choose day')
+    st.subheader('Select day')
     date_to_filter = st.slider('date', 1, 31, 1)
     filtered_data = data[data[DATE_COLUMN].dt.day == date_to_filter]
     st.subheader('The World map on 03-%s-22' % date_to_filter)
@@ -262,7 +262,7 @@ def ukraine():
     data_load_state = st.text('Loading data...')
     data = load_data()
     data_load_state.text("Done! (using st.cache)")
-    st.subheader('Choose day')
+    st.subheader('Select day')
     date_to_filter = st.slider('date', 1, 31, 1)
     filtered_data = data[data[DATE_COLUMN].dt.day == date_to_filter]
 
