@@ -247,7 +247,7 @@ def world():
     st.map(filtered_data)
     if st.checkbox('Show World data'):
         st.subheader('World data')
-        st.write(filtered_data)
+        st.write(data)
         
 def ukraine():
     DATE_COLUMN = 'date'
