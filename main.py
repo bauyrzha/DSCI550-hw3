@@ -229,7 +229,7 @@ def fox_news():
 
 def world():
     DATE_COLUMN = 'date'
-    DATA_URL = ('ukraine_map.csv')
+    DATA_URL = ('world_map.csv')
     @st.cache
     def load_data():
         data = pd.read_csv(DATA_URL)
